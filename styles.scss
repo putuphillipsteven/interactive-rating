@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+$primary-color: hsl(25, 97%, 53%);
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-lightgrey: hsl(217, 12%, 63%);
+$neutral-mediumgrey: hsl(216, 12%, 54%);
+$neutral-darkblue: hsl(213, 19%, 18%);
+$neutral-verydarkblue: hsl(216, 12%, 8%);
+$font: "Overpass", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $neutral-verydarkblue;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 320px;
+  height: 320px;
+  background-color: $neutral-darkblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  border-radius: 16px;
+  color: $neutral-white;
+}
+
+.rating-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  input {
+    display: none;
+  }
+  input:hover {
+    opacity: 1;
+  }
+  input:checked + label {
+    background-color: $primary-color;
+    opacity: 1;
+  }
+  label {
+    background-color: $neutral-lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    appearance: none;
+  }
+  label:hover {
+    background-color: $neutral-white;
+    color: $primary-color;
+    opacity: 1;
+  }
+  button {
+    background-color: $primary-color;
+    margin-top: 22px;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    color: $neutral-white;
+  }
+  button:hover {
+    background-color: $neutral-white;
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+// Rate Section End
+
+// Thankyou section start
+.thankyou-container {
+  width: 320px;
+  height: 320px;
+  background-color: $neutral-darkblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  border-radius: 16px;
+  color: $neutral-white;
+}
+.selection:not(p) {
+  width: 70%;
+  text-align: center;
+  background-color: hsl(213, 19%, 23%);
+  opacity: 0.8;
+  padding: 8px;
+  border-radius: 16px;
+  font-size: 14px;
+  p {
+    color: $primary-color;
+  }
+}
+.thankyou-paragraph p {
+  color: $neutral-mediumgrey;
+  font-size: 12px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

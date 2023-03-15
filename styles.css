@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(216, 12%, 8%);
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 320px;
+  height: 320px;
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  border-radius: 16px;
+  color: hsl(0, 0%, 100%);
+}
+
+.rating-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.rating-input input {
+  display: none;
+}
+.rating-input input:hover {
+  opacity: 1;
+}
+.rating-input input:checked + label {
+  background-color: hsl(25, 97%, 53%);
+  opacity: 1;
+}
+.rating-input label {
+  background-color: hsl(217, 12%, 63%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.rating-input label:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  opacity: 1;
+}
+.rating-input button {
+  background-color: hsl(25, 97%, 53%);
+  margin-top: 22px;
+  border: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+}
+.rating-input button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  cursor: pointer;
+}
+
+.thankyou-container {
+  width: 320px;
+  height: 320px;
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  border-radius: 16px;
+  color: hsl(0, 0%, 100%);
+}
+
+.selection:not(p) {
+  width: 70%;
+  text-align: center;
+  background-color: hsl(213, 19%, 23%);
+  opacity: 0.8;
+  padding: 8px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+.selection:not(p) p {
+  color: hsl(25, 97%, 53%);
+}
+
+.thankyou-paragraph p {
+  color: hsl(216, 12%, 54%);
+  font-size: 12px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */
