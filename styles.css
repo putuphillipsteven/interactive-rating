@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,11 +13,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: hsl(216, 12%, 8%);
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 16px;
 }
-
-.container {
+body .container {
   width: 320px;
   height: 320px;
   background-color: hsl(213, 19%, 18%);
@@ -26,29 +28,23 @@ body {
   border-radius: 16px;
   color: hsl(0, 0%, 100%);
 }
-
-.rating-input {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rating-input {
+body .rating-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.rating-input input {
+body .rating-input input {
   display: none;
 }
-.rating-input input:hover {
+body .rating-input input:hover {
   opacity: 1;
 }
-.rating-input input:checked + label {
-  background-color: hsl(25, 97%, 53%);
+body .rating-input input:checked + label {
+  background-color: hsl(217, 12%, 63%);
   opacity: 1;
 }
-.rating-input label {
+body .rating-input label {
   background-color: hsl(217, 12%, 63%);
   display: flex;
   align-items: center;
@@ -64,12 +60,12 @@ body {
      -moz-appearance: none;
           appearance: none;
 }
-.rating-input label:hover {
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(25, 97%, 53%);
+body .rating-input label:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
   opacity: 1;
 }
-.rating-input button {
+body .rating-input button {
   background-color: hsl(25, 97%, 53%);
   margin-top: 22px;
   border: none;
@@ -78,10 +74,18 @@ body {
   border-radius: 8px;
   color: hsl(0, 0%, 100%);
 }
-.rating-input button:hover {
+body .rating-input button:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
   cursor: pointer;
+}
+
+.container.hidden {
+  display: none;
+}
+
+.thankyou-container.hidden {
+  display: none;
 }
 
 .thankyou-container {
@@ -96,8 +100,7 @@ body {
   border-radius: 16px;
   color: hsl(0, 0%, 100%);
 }
-
-.selection:not(p) {
+.thankyou-container .selection:not(p) {
   width: 70%;
   text-align: center;
   background-color: hsl(213, 19%, 23%);
@@ -106,16 +109,17 @@ body {
   border-radius: 16px;
   font-size: 14px;
 }
-.selection:not(p) p {
+.thankyou-container .selection:not(p) p {
   color: hsl(25, 97%, 53%);
 }
-
-.thankyou-paragraph p {
+.thankyou-container .thankyou-paragraph p {
   color: hsl(216, 12%, 54%);
   font-size: 12px;
   text-align: center;
 }
 
-.hidden {
-  display: none;
+@media all and (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
 }/*# sourceMappingURL=styles.css.map */
